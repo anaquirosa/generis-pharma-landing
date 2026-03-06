@@ -1,0 +1,811 @@
+/* COLORES */
+:root {
+    --color-primario: #39A935;
+    --color-contraste: #111D4A;
+    --color-secundario: #778F9B;
+    --color-terciario: #E8E8EF;
+}
+
+/* ---- ESTILOS DESKTOP ---- */
+
+/* BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Manrope, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: #FFF;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px 160px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.logo {
+    width: 267px;
+    height: 79px;
+    object-fit: cover;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 160px 80px 160px;
+    align-items: center;
+    gap: 100px;
+    background: #FFF;
+    margin: 0 auto;
+}
+
+/* HEADING */
+.heading {
+    display: flex;
+    width: 519px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.pretitulo {
+    align-self: stretch;
+    color: var(--color-primario);
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* H1 */
+.hero h1 {
+    align-self: stretch;
+    color: var(--color-contraste);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    opacity: 0;
+    transition: opacity 0.8s;
+    letter-spacing: -1px;
+}
+
+.pretitulo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero h1.visible {
+    opacity: 1;
+}
+
+/* INFORMACION */
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+/* INFO-ITEM */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+
+/* ICONO */
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.info-item h4 {
+    color: var(--color-contraste);
+    font-size: 20px;
+}
+
+.info-item p {
+    color: var(--color-secundario);
+    font-size: 20px;
+}
+
+/* FORMULARIO */
+.formulario {
+    display: flex;
+    width: 100%;
+    max-width: 501px;
+    padding: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    background: var(--color-primario);
+    box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.30);
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.formulario.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* TITULO */
+.formulario-titulo {
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* CONTENIDO */
+.contenido {
+    display: flex;
+    width: 100%;
+    max-width: 412px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 33px;
+}
+
+/* CAMPOS */
+.campos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    align-self: stretch;
+}
+
+/* INPUT */
+.input {
+    display: flex;
+    width: 100%;
+    height: 58px;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 2px solid #FFF;
+    background: var(--color-primario);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: #FFF;
+    opacity: 1;
+}
+
+/* TERMINOS */
+.terminos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.terminos input[type="checkbox"] {
+    display: none;
+}
+
+.terminos label {
+    position: relative;
+    padding-left: 25px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.terminos label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    box-sizing: border-box;
+}
+
+.terminos input[type="checkbox"]:checked+label::before {
+    background: #FFF;
+}
+
+.terminos input[type="checkbox"]:checked+label::after {
+    content: "✕";
+    position: absolute;
+    left: 2px;
+    top: -1px;
+    color: #39A935;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+/* BOTON */
+#registro {
+    display: flex;
+    width: 100%;
+    max-width: 411px;
+    height: 58px;
+    padding: 8px 136px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #FFF;
+    color: var(--color-primario);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#registro:hover {
+    background: var(--color-contraste);
+    color: #FFF;
+}
+
+.input.error {
+    border-color: yellow;
+}
+
+.error-texto {
+    color: yellow;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.success-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: #FFF;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.success-message p {
+    color: var(--color-primario);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.success-message.visible {
+    display: flex;
+}
+
+/* BENEFICIOS */
+.beneficios {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px 160px 80px 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    background: #FFF;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* HEADING */
+.beneficios-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+}
+
+/* TITULO */
+.beneficios-titulo {
+    align-self: stretch;
+    color: var(--color-contraste);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+/* PUNTOS CLAVE */
+.puntos-clave {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    align-items: stretch;
+}
+
+/* PUNTO */
+.punto {
+    display: flex;
+    padding: 26px 45px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1 0 0;
+    border: 1px solid var(--color-primario);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.punto:hover {
+    transform: translateY(-10px);
+    background-color: var(--color-contraste);
+    border: 1px solid var(--color-contraste);
+}
+
+.punto:hover .punto-titulo {
+    color: #FFF;
+}
+
+.punto:hover .punto-descripcion {
+    color: #FFF;
+}
+
+/* ICONO */
+.punto-icono {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* TITULO PUNTO */
+.punto-titulo {
+    align-self: stretch;
+    color: var(--color-contraste);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+/* DESCRIPCION PUNTO */
+.punto-descripcion {
+    align-self: stretch;
+    color: var(--color-secundario);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+/* WEBINARS ANTERIORES */
+.webinars-anteriores {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px 160px 80px 160px;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* HEADING */
+.webinars-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+}
+
+/* H2 */
+.webinars-titulo {
+    align-self: stretch;
+    color: var(--color-contraste);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+/* TEXTO */
+.webinars-texto {
+    align-self: stretch;
+    color: #778F9B;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* VIDEOS */
+.videos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+/* VIDEO */
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+}
+
+.video a {
+    width: 100%;
+}
+
+/* THUMBNAIL */
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.video-thumbnail::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.10);
+    transition: opacity 0.3s ease;
+}
+
+.video:hover .video-thumbnail {
+    transform: translateY(-5px);
+}
+
+.video:hover .video-thumbnail::before {
+    opacity: 0;
+}
+
+/* ICONO YOUTUBE */
+.video-icono {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    position: relative;
+}
+
+/* TITULO VIDEO */
+.video-titulo {
+    align-self: stretch;
+    color: var(--color-secundario);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 40px 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background: var(--color-contraste);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.footer p {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    align-self: stretch;
+}
+
+/* ---- ESTILOS VERSIÓN MÓVIL ---- */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        height: 109px;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 136px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* HERO */
+    .hero {
+        width: 100%;
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    /* HEADING */
+    .heading {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+
+    /* PRETITULO */
+    .pretitulo {
+        font-size: 14px;
+        text-underline-offset: 6px;
+    }
+
+    /* H1 */
+    .hero h1 {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    /* INFORMACION */
+    .informacion {
+        gap: 10px;
+    }
+
+    /* INFO ITEM */
+    .info-item {
+        gap: 10px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .info-item h4 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .info-item p {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    /* FORMULARIO */
+
+    #formulario-registro {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .formulario {
+        max-width: 100%;
+        padding: 40px 40px;
+        gap: 48px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 40px 0 rgba(0, 0, 0, 0.10);
+    }
+
+    .formulario-titulo {
+        font-size: 26px;
+        line-height: 30px;
+        align-self: stretch;
+    }
+
+    .contenido {
+        max-width: 100%;
+        width: 100%;
+        gap: 33px;
+        align-self: stretch;
+    }
+
+    .campos {
+        gap: 25px;
+        width: 100%;
+    }
+
+    .input {
+        height: 50px;
+        border: 1px solid #FFF;
+    }
+
+    .terminos {
+        gap: 10px;
+    }
+
+    .terminos label {
+        font-size: 12px;
+        line-height: 16px;
+        flex: 1 0 0;
+        width: 100%;
+    }
+
+    #registro {
+        width: 100%;
+        padding: 8px 26px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* BENEFICIOS */
+    .beneficios {
+        width: 100%;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    .beneficios-titulo {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    /* PUNTOS CLAVE */
+    .puntos-clave {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .punto {
+        height: 300px;
+        padding: 0 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border: 1px solid #778F9B;
+        flex: unset;
+        width: 100%;
+    }
+
+    .punto-icono {
+        width: 141px;
+        height: 100px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .punto-titulo {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .punto-descripcion {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    /* WEBINARS ANTERIORES */
+    .webinars-anteriores {
+        width: 100%;
+        padding: 20px 20px 60px 20px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .webinars-heading {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    .webinars-titulo {
+        font-size: 28px;
+        line-height: 40px;
+        align-self: stretch;
+    }
+
+    .webinars-texto {
+        font-size: 18px;
+        align-self: stretch;
+    }
+
+    /* VIDEOS */
+    .videos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+    }
+
+    .video {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+        flex: unset;
+        width: 100%;
+    }
+
+    .video-thumbnail {
+        padding: 72px 149px;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .video-titulo {
+        font-size: 16px;
+        line-height: 20px;
+        align-self: stretch;
+    }
+
+    /* FOOTER */
+    .footer {
+        width: 100%;
+        padding: 40px 20px;
+        gap: 80px;
+    }
+
+    .footer p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        align-self: stretch;
+        color: #FFF;
+    }
+
+}

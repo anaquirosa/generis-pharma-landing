@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generis Pharma - Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <img class="logo" src="medias/logo/Generis_Pharma.svg" alt="Generis Pharma">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="heading">
+            <span class="pretitulo">Webinar Online | Actualización en Dermatología</span>
+            <h1>Mas allá del picor: Estrategias efectivas para el control de la dermatitis.</h1>
+            <div class="informacion">
+                <div class="info-item">
+                    <img class="icon" src="medias/icons/calendar.svg" alt="Icono calendario">
+                    <h4>Fecha</h4>
+                    <p>25/03/2026</p>
+                </div>
+
+                <div class="info-item">
+                    <img class="icon" src="medias/icons/clock.svg" alt="Icono reloj">
+                    <h4>Hora</h4>
+                    <p>10:00h</p>
+                </div>
+
+                <div class="info-item">
+                    <img class="icon" src="medias/icons/location.svg" alt="Icono lugar">
+                    <h4>Lugar</h4>
+                    <p>En directo vía Zoom</p>
+                </div>
+
+                <div class="info-item">
+                    <img class="icon" src="medias/icons/doctor.svg" alt="Icono doctor">
+                    <h4>Ponente</h4>
+                    <p>Dr. Julian Vance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <p class="formulario-titulo">Registrate al Webinar</p>
+            <form id="formulario-registro">
+                <div class="contenido">
+
+                    <div class="campos">
+                        <input class="input" type="text" name="nombre" placeholder="Nombre completo" />
+                        <input class="input" type="email" name="email" placeholder="Email" />
+                        <input class="input" type="text" name="especialidad" placeholder="Especialidad" />
+                    </div>
+
+                    <div class="terminos">
+                        <input type="checkbox" id="aceptar" name="terminos" />
+                        <label for="aceptar">
+                            Acepto los términos y la política de privacidad.
+                        </label>
+                    </div>
+
+                    <button id="registro" type="submit">REGISTRARME</button>
+
+                    <div class="success-message" id="success-message">
+                        <p>¡Registro completado con éxito!</p>
+                        <p>Te esperamos en el Webinar.</p>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="beneficios">
+        <div class="beneficios-heading">
+            <h2 class="beneficios-titulo">Ventajas de participar</h2>
+        </div>
+
+        <div class="puntos-clave">
+            <div class="punto">
+                <img class="punto-icono" src="medias/images/terapias-precisas.png" alt="Icono de terapias precisas para dermatitis">
+                <h3 class="punto-titulo">Terapias precisas</h3>
+                <p class="punto-descripcion">Conoce las estrategias más innovadoras para controlar la dermatitis.
+                </p>
+            </div>
+
+            <div class="punto">
+                <img class="punto-icono" src="medias/images/evidencia-cientifica.png" alt="Icono de evidencia científica clínica">
+                <h3 class="punto-titulo">Evidencia científica</h3>
+                <p class="punto-descripcion">Analiza la evidencia clínica más reciente y los protocolos que están
+                    redefiniendo el manejo de la dermatitis atópica.</p>
+            </div>
+
+            <div class="punto">
+                <img class="punto-icono" src="medias/images/paciente-feliz.png" alt="Icono de paciente con mejor calidad de vida">
+                <h3 class="punto-titulo">Mejor experiencia del paciente</h3>
+                <p class="punto-descripcion">Optimiza el control del prurito y reduce la frecuencia de brotes para
+                    mejorar la calidad de vida del paciente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="webinars-anteriores">
+        <div class="webinars-heading">
+            <h2 class="webinars-titulo">Webinars Anteriores</h2>
+            <p class="webinars-texto">Accede a nuestras sesiones anteriores y sigue aprendiendo.</p>
+        </div>
+
+        <div class="videos">
+            <div class="video">
+                <a href="https://www.youtube.com" target="_blank">
+                    <div class="video-thumbnail" style="background-image: url('medias/images/video-1.jpg')">
+                        <img class="video-icono" src="medias/icons/youtube.png" alt="Ver Protocolos de cribado en YouTube">
+                    </div>
+                </a>
+                <p class="video-titulo">Protocolos de cribado</p>
+            </div>
+
+            <div class="video">
+                <a href="https://www.youtube.com" target="_blank">
+                    <div class="video-thumbnail" style="background-image: url('medias/images/video-2.jpg')">
+                        <img class="video-icono" src="medias/icons/youtube.png" alt="Ver Innovación en Dermatología en YouTube">
+                    </div>
+                </a>
+                <p class="video-titulo">Innovación en Dermatología</p>
+            </div>
+
+            <div class="video">
+                <a href="https://www.youtube.com" target="_blank">
+                    <div class="video-thumbnail" style="background-image: url('medias/images/video-3.jpg')">
+                        <img class="video-icono" src="medias/icons/youtube.png" alt="Ver Actualización en terapias biológicas en YouTube">
+                    </div>
+                </a>
+                <p class="video-titulo">Actualización en terapias biológicas</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Generis Pharma. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
